@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Timeline</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="project.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="projectscript.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+
+        <li class="searchcats"><a href="#"  onclick="showallcats();"><span class="glyphicon glyphicon-search"></span> Search Categories <span class="glyphicon glyphicon-chevron-down" id="downarr"></span></a>
+          <div id="searchdropdown">
+            <div class="dropdowninner">
+              Literature <span class="glyphicon glyphicon-book"></span><br>
+              <input type="checkbox" name="category"  value="books"> <label> Books</label><br>
+              <input type="checkbox" name="category"  value="poetry"> <label> Poetry</label><br>
+              <input type="checkbox" name="category"  value="short-stories"> <label> Short Stories</label><br>
+              <input type="checkbox" name="category"  value="biographies"> <label> Biographies</label><br>
+
+
+            </div>
+
+            <div class="dropdowninner">
+              Handicrafts <span class="glyphicon glyphicon-lamp"></span><br>
+              <input type="checkbox" name="category"  value="pottery"> <label> Pottery</label><br>
+              <input type="checkbox" name="category"  value="woodwork"> <label> Wood-work</label><br>
+              <input type="checkbox" name="category"  value="stitching"> <label> Stitching</label><br>
+              <input type="checkbox" name="category"  value="sculpting"> <label> Sculpting</label><br>
+
+
+            </div>
+            <div class="dropdowninner">
+              Art <span class="glyphicon glyphicon-tint"></span><br>
+              <input type="checkbox" name="category"  value="acrylics"> <label> Acrylics</label><br>
+              <input type="checkbox" name="category"  value="water-paint"> <label> Water Paint</label><br>
+              <input type="checkbox" name="category"  value="spray-paint"> <label> Spray Paint</label><br>
+              <input type="checkbox" name="category"  value="oil-paint"> <label> Oil Paint</label><br>
+              <input type="checkbox" name="category"  value="calligraphy"> <label> Calligraphy</label><br>
+
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="dropdowninner">
+              Cinematography  <span class="glyphicon glyphicon-camera"></span><br>
+              <input type="checkbox" name="category"  value="photography"> <label> Photography</label><br>
+              <input type="checkbox" name="category"  value="videography"> <label> Videography</label><br>
+
+
+
+            </div>
+             <div class="dropdowninner">
+
+              Graphics <span class="glyphicon glyphicon-hd-video"></span><br>
+              <input type="checkbox" name="category"  value="animations"> <label> Animations</label><br>
+              <input type="checkbox" name="category"  value="logo"> <label> Logo</label><br>
+              <input type="checkbox" name="category"  value="graphic-novels"> <label> Graphic-Novels</label><br>
+
+
+
+            </div>
+            <div class="dropdowninner">
+              Pen-art <span class="glyphicon glyphicon-pencil"></span><br>
+              <input type="checkbox" name="category"  value="drawing"> <label> Drawing</label><br>
+              <input type="checkbox" name="category"  value="sketching"> <label> Sketching</label><br>
+              <input type="checkbox" name="category"  value="comics"> <label> Comics</label><br>
+
+
+
+            </div>
+
+            <div class="clear"></div>
+            <div class="dropdowninner" ><button id="searchbutton" onclick="categoriesSelect('category')"> Search <span class="glyphicon glyphicon-search"></span></button></div>
+
+          </div>
+
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li onclick="openProfile()"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="seacrhcats"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-cog"></span> Settings <i class="glyphicon glyphicon-chevron-down"></i></a>
+          <div id="settings">
+            <div class="dropdowninner settings_drop">
+              <div onclick="profileSetup();"><label><u>ProfileSetup</u></label></div>
+              <div onclick="pwd_reset();"><label><u>ChangePassword</u></label></div>
+              <div onclick="aboutus();"><label><u>AboutUs</u></label></div>
+            </div>
+          </div>
+        </li>
+        <li><a onclick="logout()" id="logoutbutton"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left" id="contentDisplayArea">
+      <div id="selectedpost">
+        <div id="closeselectedpost" onclick="closeselectedpost()"><span class="glyphicon glyphicon-remove"></span></div>
+        <div id="addtofav" onclick="addToFav()"><span class="glyphicon glyphicon-heart-empty"></span></div>
+        <div class="clear"></div>
+        <div id="pictureselectedpost"></div>
+        <div id="captionselectedpost" class="dataselectedpost"><b>CAPTION: </b></div>
+
+        <div id="descriptionselectedpost" class="dataselectedpost"><b>DESCRIPTION: </b></div>
+        <div class="similardata">
+        <div id="usernameselectedpost" class="dataselectedpost"><b>USERNAME: </b></div>
+        <div id="contactselectedpost" class="dataselectedpost"><b>CONTACT: </b></div>
+      </div>
+      <div class="clear"></div>
+      <div class="similardata">
+
+        <div id="dateselectedpost" class="dataselectedpost"><b>DATE: </b></div>
+        <div id="regionselectedpost" class="dataselectedpost"><b>REGION: </b></div>
+      </div>
+      </div>
+
+      <div class="content-picture">
+
+        <div class="content-picture-text" onclick="openupload()">
+        <span id="newcontentpicture" class="glyphicon glyphicon-picture"></span><br>
+        <span class="glyphicon glyphicon-plus"></span>ADD NEW PICTURE</div>
+
+
+      </div>
+
+      <script type="text/javascript">timelineExec()</script>
+
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="project.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="projectscript.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+
+        <li class="searchcats"><a href="#"  onclick="showallcats();"><span class="glyphicon glyphicon-search"></span> Search Categories <span class="glyphicon glyphicon-chevron-down" id="downarr"></span></a>
+          <div id="searchdropdown">
+            <div class="dropdowninner">
+              Literature <span class="glyphicon glyphicon-book"></span><br>
+              <input type="checkbox" name="category"  value="books"> <label> Books</label><br>
+              <input type="checkbox" name="category"  value="poetry"> <label> Poetry</label><br>
+              <input type="checkbox" name="category"  value="short-stories"> <label> Short Stories</label><br>
+              <input type="checkbox" name="category"  value="biographies"> <label> Biographies</label><br>
+
+
+            </div>
+
+            <div class="dropdowninner">
+              Handicrafts <span class="glyphicon glyphicon-lamp"></span><br>
+              <input type="checkbox" name="category"  value="pottery"> <label> Pottery</label><br>
+              <input type="checkbox" name="category"  value="woodwork"> <label> Wood-work</label><br>
+              <input type="checkbox" name="category"  value="stitching"> <label> Stitching</label><br>
+              <input type="checkbox" name="category"  value="sculpting"> <label> Sculpting</label><br>
+
+
+            </div>
+            <div class="dropdowninner">
+              Art <span class="glyphicon glyphicon-tint"></span><br>
+              <input type="checkbox" name="category"  value="acrylics"> <label> Acrylics</label><br>
+              <input type="checkbox" name="category"  value="water-paint"> <label> Water Paint</label><br>
+              <input type="checkbox" name="category"  value="spray-paint"> <label> Spray Paint</label><br>
+              <input type="checkbox" name="category"  value="oil-paint"> <label> Oil Paint</label><br>
+              <input type="checkbox" name="category"  value="calligraphy"> <label> Calligraphy</label><br>
+
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="dropdowninner">
+              Cinematography  <span class="glyphicon glyphicon-camera"></span><br>
+              <input type="checkbox" name="category"  value="photography"> <label> Photography</label><br>
+              <input type="checkbox" name="category"  value="videography"> <label> Videography</label><br>
+
+
+
+            </div>
+             <div class="dropdowninner">
+
+              Graphics <span class="glyphicon glyphicon-hd-video"></span><br>
+              <input type="checkbox" name="category"  value="animations"> <label> Animations</label><br>
+              <input type="checkbox" name="category"  value="logo"> <label> Logo</label><br>
+              <input type="checkbox" name="category"  value="graphic-novels"> <label> Graphic-Novels</label><br>
+
+
+
+            </div>
+            <div class="dropdowninner">
+              Pen-art <span class="glyphicon glyphicon-pencil"></span><br>
+              <input type="checkbox" name="category"  value="drawing"> <label> Drawing</label><br>
+              <input type="checkbox" name="category"  value="sketching"> <label> Sketching</label><br>
+              <input type="checkbox" name="category"  value="comics"> <label> Comics</label><br>
+
+
+
+            </div>
+
+            <div class="clear"></div>
+            <div class="dropdowninner" ><button id="searchbutton" onclick="categoriesSelect('category')"> Search <span class="glyphicon glyphicon-search"></span></button></div>
+
+          </div>
+
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li onclick="openProfile()"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="seacrhcats"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-cog"></span> Settings <i class="glyphicon glyphicon-chevron-down"></i></a>
+          <div id="settings">
+            <div class="dropdowninner settings_drop">
+              <div onclick="profileSetup();"><label><u>ProfileSetup</u></label></div>
+              <div onclick="pwd_reset();"><label><u>ChangePassword</u></label></div>
+              <div onclick="aboutus();"><label><u>AboutUs</u></label></div>
+            </div>
+          </div>
+        </li>
+        <li><a onclick="logout()" id="logoutbutton"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+  
+
+    <div class="col-sm-8 text-left" id="contentDisplayArea">
+      
+      <div id="AdImageUpload">
+        <img id="uploadimageoutput"  /> 
+        </div>
+        
+        <label for="chooseImage" >Upload an Image: &nbsp;</label>
+        <input style="border-radius: 0px;"  type="file" id= "uploadImage" name="chooseImage" accept="image/*" onchange="loadFile(event)">
+        
+      <br/>
+      <label  for="chooseCaption" >Caption: &nbsp;</label><input type="text" id="uploadCaption" placeholder="Caption:" maxlength="100">
+      <br/>
+      <br/>
+      <label style="float: left;" for="chooseDescription">Description: &nbsp;</label><textarea id="uploadDescription" placeholder="Description:" maxlength="200" rows="5" cols="50"></textarea> 
+      <div class="clear"></div>
+      <br/>
+      <br/>
+      <label  for="chooseContact" >Contact: &nbsp;</label><input type="text" id="uploadContact" placeholder="+92" maxlength="13">
+      <br/>
+      <br/>
+      
+      <br/>
+      <label  for="chooseRegion" >Region: &nbsp;</label><input type="text" id="uploadRegion" placeholder="Caption:" maxlength="100">
+      <br/>
+      <br/>
+      
+
+      <label style="float: none;" for="chooseCategory">Category: &nbsp; &nbsp;</label><select id="uploadCategory">
+        <option value="" selected="">--Category--</option>
+
+        <option value="books">Books</option>
+        <option value="poetry">Poetry</option>
+        <option value="short-stories">Short Stories</option>
+        <option value="biographies">Biographies</option>
+        <option value="pottery">Pottery</option>
+        <option value="woodwork">Woodwork</option>
+        <option value="sculpting">Sculpting</option>
+        <option value="stitching">Stitching</option>
+        
+        <option value="acrylics">Acrylics</option>
+        <option value="water-paint">Water Paint</option>
+        <option value="spray-paint">Spray Paint</option>
+        <option value="oil-paint">Oil Paint</option>
+        <option value="calligraphy">Calligraphy</option>
+        <option value="photography">Photography</option>
+        <option value="videography">Videography</option>
+        <option value="animations">Animations</option>
+        <option value="logo">Logo</option>
+        <option value="graphic-novels">Graphic Novels</option>
+        <option value="drawing">Drawing</option>
+        <option value="sketching">Sketching</option>
+        <option value="comics">Comics</option>
+        
+      </select>
+      <div class="clear"></div>
+
+
+
+      <button style=" margin-top: 30px; height: 30px; border-radius: 10px; color: white; font-weight: bold; background-color: blue; margin-bottom: 20px;" id="uploadSubmit" onclick="uploadAd()">Submit</button>
+        
+
+      
+
+         
+
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

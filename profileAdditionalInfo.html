@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+
+<head>
+  <title>Profile Setup</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="profile.css">
+  <script type="text/javascript" src="./projectscript.js"></script>
+
+</head>
+
+<body>
+<div>&nbsp;&nbsp;</div>
+<div class="container">
+
+  <hr>
+
+    <div class="row">
+      <br><br>
+  		<div class="col-sm-3">
+        <div class="text-center" id="profilePicDiv">
+          <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" id="profilePicImg" alt="avatar">
+          <div>&nbsp;</div>
+          <input type="file" id="profilePicUpload" name="profilePicUpload" onchange="displayUploadProfile()">
+        </div></hr><br>
+        </div>
+    	<div class="col-sm-9">
+          <div class="tab-content">
+
+
+                      <div class="form-group">
+                        <div class="col-12 col-xs-12">
+                          <label for="description"><h4>Description</h4></label>
+                          <textarea type="text" rows="5" cols="50" class="form-control" name="description" id="description" placeholder="description" title="Tell people something about yourself!" maxlength="100">
+                          </textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="contact" placeholder="+92" title="enter your phone number if any." maxlength="13">
+                          </div>
+                      </div>
+
+
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="country"><h4>Country</h4></label>
+                              <input type="text" class="form-control" name="country" id="country" placeholder="enter country" title="enter country.">
+                          </div>
+                      </div>
+
+                      
+
+
+                <div>&nbsp;</div>
+
+
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="messages">
+
+
+
+
+             <div class="tab-pane" id="settings">
+
+
+                    <div class="col-xs-12"><br><br></div>
+                      <div class="form-group">
+                          <div class=" col-xs-3 col-md-4"></div>
+                           <div class="col-xs-6 col-md-4">
+                                <br>
+                              	<button class="btn btn-lg btn-success" id="save-profile" onclick="settingsToTimeline()"><i class="glyphicon glyphicon-ok-sign"></i><div>Save</div></button>
+                               	
+                            </div>
+                      </div>
+                      <div class="col-md-4 col-xs-3"></div>
+
+
+
+                  <div class="col-xs-10"></div>
+                  
+
+              </div><!--/tab-pane-->
+
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+
+    </div>
+    <div>&nbsp;</div>
+  <hr>
+
+    </div><!--/row-->
+    <div>&nbsp;&nbsp;</div>
+    </body>

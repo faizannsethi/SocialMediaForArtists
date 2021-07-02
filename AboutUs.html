@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/profile-page.css">
+  <script type="text/javascript" src="./projectscript.js"></script>
+  <script type="text/javascript" src="js/profile-page.js"></script>
+</head>
+<body>
+
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+
+        <li class="searchcats"><a href="#"  onclick="showallcats();"><span class="glyphicon glyphicon-search"></span> Search Categories <span class="glyphicon glyphicon-chevron-down" id="downarr"></span></a>
+          <div id="searchdropdown">
+            <div class="dropdowninner">
+              Literature <span class="glyphicon glyphicon-book"></span><br>
+              <input type="checkbox" name="category"  value="books"> <label> Books</label><br>
+              <input type="checkbox" name="category"  value="poetry"> <label> Poetry</label><br>
+              <input type="checkbox" name="category"  value="short-stories"> <label> Short Stories</label><br>
+              <input type="checkbox" name="category"  value="biographies"> <label> Biographies</label><br>
+
+
+            </div>
+
+            <div class="dropdowninner">
+              Handicrafts <span class="glyphicon glyphicon-lamp"></span><br>
+              <input type="checkbox" name="category"  value="pottery"> <label> Pottery</label><br>
+              <input type="checkbox" name="category"  value="woodwork"> <label> Wood-work</label><br>
+              <input type="checkbox" name="category"  value="stitching"> <label> Stitching</label><br>
+              <input type="checkbox" name="category"  value="sculpting"> <label> Sculpting</label><br>
+
+
+            </div>
+            <div class="dropdowninner">
+              Art <span class="glyphicon glyphicon-tint"></span><br>
+              <input type="checkbox" name="category"  value="acrylics"> <label> Acrylics</label><br>
+              <input type="checkbox" name="category"  value="water-paint"> <label> Water Paint</label><br>
+              <input type="checkbox" name="category"  value="spray-paint"> <label> Spray Paint</label><br>
+              <input type="checkbox" name="category"  value="oil-paint"> <label> Oil Paint</label><br>
+              <input type="checkbox" name="category"  value="calligraphy"> <label> Calligraphy</label><br>
+
+
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="dropdowninner">
+              Cinematography  <span class="glyphicon glyphicon-camera"></span><br>
+              <input type="checkbox" name="category"  value="photography"> <label> Photography</label><br>
+              <input type="checkbox" name="category"  value="videography"> <label> Videography</label><br>
+
+
+
+            </div>
+             <div class="dropdowninner">
+
+              Graphics <span class="glyphicon glyphicon-hd-video"></span><br>
+              <input type="checkbox" name="category"  value="animations"> <label> Animations</label><br>
+              <input type="checkbox" name="category"  value="logo"> <label> Logo</label><br>
+              <input type="checkbox" name="category"  value="graphic-novels"> <label> Graphic-Novels</label><br>
+
+
+
+            </div>
+            <div class="dropdowninner">
+              Pen-art <span class="glyphicon glyphicon-pencil"></span><br>
+              <input type="checkbox" name="category"  value="drawing"> <label> Drawing</label><br>
+              <input type="checkbox" name="category"  value="sketching"> <label> Sketching</label><br>
+              <input type="checkbox" name="category"  value="comics"> <label> Comics</label><br>
+
+
+
+            </div>
+
+            <div class="clear"></div>
+            <div class="dropdowninner" ><button id="searchbutton" onclick="categoriesSelect('category')"> Search <span class="glyphicon glyphicon-search"></span></button></div>
+
+          </div>
+
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li onclick="openProfile()"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="seacrhcats"><a href="#" onclick="showsettings();"><span class="glyphicon glyphicon-cog"></span> Settings <i class="glyphicon glyphicon-chevron-down"></i></a>
+          <div id="settings">
+            <div class="dropdowninner settings_drop">
+              <div onclick="profileSetup();"><label><u>ProfileSetup</u></label></div>
+              <div onclick="pwd_reset();"><label><u>ChangePassword</u></label></div>
+              <div onclick="aboutus();"><label><u>AboutUs</u></label></div>
+            </div>
+          </div>
+        </li>
+        <li><a onclick="logout()" id="logoutbutton"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<div style="width: 100%; height: 475px;">
+
+		<h1 style="margin: 20px; font-family: sans-serif;">
+			About Us
+		</h1>
+
+    	<p style="margin: 20px; font-size: 1.3em; font-family: sans-serif;">
+    		We provide a platform to the artists such as writers, painters, poets, graphic designers etc. </br> to showcase their talent
+    		and prove their worth in this ever evolving market of arts.
+		</p>
+	</div>
+    
+
+	  <footer class="social-footer container-fluid text-center" style="margin-bottom: 0;">
+        <div class="social-footer-left">
+          <a href="#">LOGO</a>
+          <span>&copy; Copyrights</span>
+        </div>
+        <div class="social-footer-icons">
+          <div class="template-demo">
+           <button type="button" class="btn btn-social-icon btn-facebook btn-rounded">
+            <img src="personal/fb.png">
+           </button>
+           <button type="button" class="btn btn-social-icon btn-instagram btn-rounded">
+            <img src="personal/insta.png">
+           </button>
+           <button type="button" class="btn btn-social-icon btn-whatsapp btn-rounded">
+            <img src="personal/whatsapp.png">
+           </button>
+         </div>
+        </div>
+      </footer>
+
+</body>
+</html>
