@@ -1,0 +1,37 @@
+.rbutton{
+  border-radius: 25px;
+  background: #24A0ED;
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.right-align{
+  text-align: right;
+}
+
+.container-fluid{
+  background-color: #303030;
+  color:white;
+
+}
+
+.container{
+  margin: auto;
+}
+
+.black{
+  color: #303030;
+}
+
+.glyphicon-repeat{
+  color: #303030;
+}
+
+#file-upload{
+  display: none;
+}
+
+#file-chosen{
+  font-size: 11px;
+}

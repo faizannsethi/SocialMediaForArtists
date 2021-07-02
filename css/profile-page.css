@@ -1,0 +1,522 @@
+
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  
+}
+
+    
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 1200px;
+}
+
+    
+/********************************LEFT 4 COLUMNS OF THE PROFILE PAGE***************************************/
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+.clear{
+  float: none;
+}
+
+#downarr{
+  transition: all 0.75s 0.25s;
+  transform: rotate(0);
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
+
+#searchbutton{
+  
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: blue;
+}
+
+#searchdropdown{	
+  display: none;
+  height: auto;
+  width: 120%;
+  padding: 5px;
+}
+#settings{
+  display: none;
+  height: auto;
+  width: 140%;
+  padding: 5px;
+}
+
+#settings label:hover{
+  cursor: pointer;
+}
+
+.show{
+  display: block;
+}
+
+.dropdowninner{  
+  width: 30%;
+  display: block;
+  color: white;
+  padding: 5px;
+  font-size: 15px;
+  float: left;
+  margin-top: 5px;
+  height: auto;
+  font-weight: bold;
+  margin-left: 2%;
+}
+
+.dropdowninner label{
+  font-weight: normal;
+
+}
+
+.side-nav-info {
+  background-color: white;
+  height: auto;
+  width: 80%;
+  margin-top: 2em;
+  margin-left:3em;
+}
+
+.profile-picture {
+  width: 80%;
+  margin: 0 auto;
+}    
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 50%;
+  height: 130px;
+  object-fit: cover;
+  margin-top: 10%;
+}
+
+.username {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  font: sans-serif;
+} 
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.detail {
+  font: sans-serif;
+  font-size: 0.95em;
+  color: #62646a;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+
+.headings {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.description {
+/*  text-align: justify;
+*/  font-weight: normal;
+  font-size: 0.8em;
+  padding: 5%;
+  color: #62646a;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  padding: 2em;
+
+}
+
+.interest-divs {
+  font-size: 0.9em;
+  font-weight: normal;
+  text-align: center;
+  width: 90%;
+  margin: 5%;
+  border: 3px solid;
+  border-image-source: linear-gradient(135deg, seagreen 40%, lightblue);
+  border-image-slice : 1;
+  background-color: black;
+  color: white;
+}
+
+.text{
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.sub-text {
+  font-size: 0.7em;
+  color: #62646a;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+
+#personalposts{
+  
+  margin-bottom: 3%;
+  width: 40%;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 25px;
+  float: left;
+  margin-left: 4%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: silver;
+  padding: 12px;
+}
+#favoriteposts{
+  
+  width: 40%;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 25px;
+  float: left;
+  margin-left: 4%;
+  text-align: center;
+  background-color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3%;
+  padding: 12px;
+}
+#personalposts:hover{
+  cursor: pointer;
+
+}
+#favoriteposts:hover{
+  cursor: pointer;
+}
+#Favorites{
+  display: none;
+  
+}
+
+
+
+  
+
+/***********************************RIGHT 8 COLUMNS OF THE PROFILE PAGE*********************************/
+
+.post-container {
+  
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+.post-right {
+  
+  width: 95%;
+  margin-top: 5%;
+  padding-left: 8%;
+  background-color: white;
+  height: 95%;
+  padding-top: 2em;
+}
+
+.post {
+  position: relative;
+  float: left;
+  margin: 2%;
+  border: 2px solid black;
+  height: 19%;
+  width: 27%;
+  border-radius: 15%;
+}
+.post:hover{
+  cursor: pointer;
+}
+
+.post img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
+  object-fit: cover;
+}
+
+
+#selectedpost{
+  padding: 5px;
+  margin-top: 20px;
+  width: 40%;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 30px;
+  z-index: 9;
+  position: fixed;
+  margin-left: 10%;
+  overflow-y: auto;  
+  background-color: silver;
+  display: none;
+
+}
+
+#closeselectedpost{
+  
+  border-radius: 30px;
+  width: 3%;
+  margin: 1%;
+  float: left;
+  
+  
+
+}
+#logoutbutton:hover{
+  cursor: pointer;
+}
+#closeselectedpost:hover{
+  
+  cursor: pointer;
+}
+#addtofav{
+  width: 3%;
+  margin: 1%;
+  float: left;
+
+
+}
+#addtofav:hover{
+  cursor: pointer;
+}
+#pictureselectedpost{
+  border: 1px solid black;
+  margin: auto;
+  width: 70%;
+  height: 250px;
+  border-radius: 30px;
+  background-color: white;
+
+}
+#pictureselectedpost img{
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+
+
+}
+.dataselectedpost{
+  border: 1px solid black;
+  background-color: white;
+  padding-left: 2px;
+  border-radius: 10px;
+
+
+  
+  height: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  position: relative;
+  margin-top: 3.5%;
+  font-size: 16px;
+
+}
+.similardata{
+  width: 50%;
+  height: 130px;
+  
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+  
+
+
+/**********************************************FOOTER*************************************************/
+/* Set black background color, white text and some padding */
+footer {
+  position: relative;
+  
+  padding: 2%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+}
+
+ button > img {
+  width: 40px;
+  height: 40px;
+ }
+
+.btn.btn-social-icon {
+     width: 50px;
+     height: 50px;
+     padding: 0
+ }
+
+.social-footer-left {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+ .template-demo>.btn {
+     margin-right: 0.5rem !important
+ }
+
+ .template-demo {
+     margin-top: 0.5rem !important
+ }
+
+ .btn.btn-rounded {
+     border-radius: 50px;
+ }
+
+
+ .btn-facebook {
+     background: #3b579d;
+ }
+
+ .btn-instagram {
+     background: #dc4a38;
+ }
+
+ .bbtn-whatsapp {
+    background-color: #4fce5d; 
+}
+
+
+ .btn-facebook:hover,
+ .btn-facebook:focus {
+     background: #2d4278;
+     color: #ffffff
+ }
+
+
+ .btn-instagram:hover,
+ .btn-instagram:focus {
+     background: #bf3322;
+     color: #ffffff
+ }
+
+ .btn-whatsapp:hover,
+ .btn-whatsapp:focus {
+     background: #ffffff;
+     color: #ffffff
+ }
+
+    
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+   .row {
+    display: block;
+  }
+
+.post-right {
+  width: 100%;
+  padding:0;
+  margin-left: 0;
+  }
+
+.post {
+  clear: left;
+  margin-left: 30%;
+  border: 1px solid black;
+  height: 19%;
+  width: 30%;
+  border-radius: 15%;
+
+  }
+
+  .post img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+    }
+  #selectedpost{
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 10px;
+
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 60%;
+  }
+  .dataselectedpost{
+    font-size: 12px;
+  }
+
+}
+
+
+/* On screen size ranging from */
+@media (max-width: 1200px) and (min-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    display: block;
+  }
+
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+
+
+
+  footer {
+  position: relative;
+  padding: 2%;
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  }
+
+}
+
+.line {
+  color: grey;
+  margin-top: 5%;
+  width: 80%;
+}
+
+.padding-bottom {
+	padding-bottom: 5%;
+}
